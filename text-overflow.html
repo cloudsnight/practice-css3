@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Text Overflow</title>
+
+  <style>
+    div{
+      width: 150px;
+      height: 150px;
+      background: yellow;
+    }
+
+    #div1{
+      overflow-y: hidden;
+    }
+
+    #div2{
+      overflow-y: scroll;
+    }
+
+    #div3{
+      overflow-y: hidden;
+      /* resize: vertical/horizontal/both */
+      resize: vertical;
+    }
+
+    #div4{
+      overflow-y: hidden;
+      opacity: 0.4;
+    }
+
+    img{
+      opacity: 0.6;
+      transition: opacity 2s;
+    }
+
+    img:hover{
+      opacity: 1;
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Here -->
+  <h1>Overflow hidden</h1>
+  <div id="div1">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, vel nobis esse harum placeat praesentium velit, excepturi iste exercitationem voluptatibus laboriosam dicta debitis eius consequatur inventore. Dignissimos facilis tenetur sunt sapiente ut enim rerum mollitia, reprehenderit impedit accusantium aut hic iusto corrupti necessitatibus delectus inventore voluptatibus aliquam dolores aperiam animi.
+  </div>
+
+  <h1>Overflow scroll</h1>
+  <div id="div2">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, vel nobis esse harum placeat praesentium velit, excepturi iste exercitationem voluptatibus laboriosam dicta debitis eius consequatur inventore. Dignissimos facilis tenetur sunt sapiente ut enim rerum mollitia, reprehenderit impedit accusantium aut hic iusto corrupti necessitatibus delectus inventore voluptatibus aliquam dolores aperiam animi.
+  </div>
+
+  <h1>Resize Vertical</h1>
+  <div id="div3">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, vel nobis esse harum placeat praesentium velit, excepturi iste exercitationem voluptatibus laboriosam dicta debitis eius consequatur inventore. Dignissimos facilis tenetur sunt sapiente ut enim rerum mollitia, reprehenderit impedit accusantium aut hic iusto corrupti necessitatibus delectus inventore voluptatibus aliquam dolores aperiam animi.
+  </div>
+
+  <h1>Opacity</h1>
+  <div id="div4">
+    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Error, vel nobis esse harum placeat praesentium velit, excepturi iste exercitationem voluptatibus laboriosam dicta debitis eius consequatur inventore. Dignissimos facilis tenetur sunt sapiente ut enim rerum mollitia, reprehenderit impedit accusantium aut hic iusto corrupti necessitatibus delectus inventore voluptatibus aliquam dolores aperiam animi.
+  </div><br>
+  <img src="assets/img/IMG_20190828_140349_HDR.jpg" width="300" alt="">
+
+
+  <div style="background: none; height: 200px;"></div>
+  
+</body>
+</html>

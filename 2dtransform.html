@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 3</title>
+
+  <style>
+
+    div{
+      transition: transform 2s;
+    }
+    /* translate */
+    #div1{
+      width: 100px;
+      height: 100px;
+      background: red;
+    }
+
+    #div1:hover{
+      transform: translate(50px, 50px);
+    }
+
+    /* Rotate */
+    #div2{
+      width: 100px;
+      height: 100px;
+      background: blue;
+      
+      margin-left: 30px;
+    }
+
+    #div2:hover{
+      transform: rotate(-40deg);
+    }
+    /* Scale */
+    #div3{
+      width: 100px;
+      height: 100px;
+      background: yellowgreen;
+       /* transform: scale(x,y); scaleX(); scaleY(); */
+      margin-left: 30px;
+    }
+
+    #div3:hover{
+      transform: scale(1, 0.5);
+    }
+    /* Skew */
+    #div4{
+      width: 100px;
+      height: 100px;
+      background: green;
+      margin-left: 30px;
+      margin-bottom: 30px;
+      
+    }
+
+    #div4:hover{
+      transform: skew(30deg, 10deg); /* skew(x,y); skewX(); skewY(); */
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Here -->
+  <h1>Translate</h1>
+  <div id="div1"></div>
+
+  <h1>Rotate</h1>
+  <div id="div2"></div>
+  
+  <h1>Scale</h1>
+  <div id="div3"></div>
+  
+  <h1>Skew</h1>
+  <div id="div4"></div>
+  
+</body>
+</html>

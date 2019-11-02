@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Animasi dan Keyframe</title>
+
+  <style>
+    body{
+      margin-bottom: 500px;
+      margin-left: 50px;
+    }
+
+    div{
+      /* background: green; */
+      height: 150px; width: 150px;
+      animation-name: ganti;
+    }
+
+    #div1{
+      animation-duration: 5s;
+    }
+
+    #div2{
+      animation-duration: 2s;
+      animation-iteration-count: 4;
+    }
+
+    #div3{
+      animation-duration: 2s;
+      animation-iteration-count: 4;
+      animation-direction: reverse;
+    }
+
+    #div4{
+      animation-duration: 3s;
+      animation-iteration-count: 4;
+      animation-direction: alternate;
+    }
+
+    #div5{
+      animation-duration: 3s;
+      animation-iteration-count: 4;
+      animation-direction: alternate-reverse;
+    }
+
+    #div6{
+      animation-duration: 2s;
+      animation-iteration-count: 4;
+      animation-delay: 4s;
+    }
+
+    @keyframes ganti{
+      from {background: yellow;}
+      to {background: red;}
+    }
+
+    @keyframes ganti-persen{
+      0% {background: yellow; width:150px;}
+      25% {background: red;}
+      50% {background: blue;}
+      75% {background: green;}
+      100% {background: grey; width:20px;}
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Here -->
+  <h1>Animasi</h1>
+  <div id="div1"></div>
+  
+  <h1>Iteration Count 4x</h1>
+  <div id="div2"></div>
+  
+  <h1>Direction Reverse</h1>
+  <div id="div3"></div>
+  
+  <h1>Direction Alternate</h1>
+  <div id="div4"></div>
+  
+  <h1>Direction Alternate Reverse</h1>
+  <div id="div5"></div>
+  
+  <h1>Delay</h1>
+  <div id="div6"></div>
+  
+  <h1 id="tf1">Fillmode Forwards</h1>
+  <div id="div7"></div>
+  <br>
+  <button id="fm1">Mulai !</button>
+  <br>
+  
+  <h1 id="tf2">Keyframe dengan Persen</h1>
+  <div id="div8"></div>
+  <br>
+  <button id="fm2">Mulai !</button>
+  <br>
+
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function(){
+      // Fillmode Forwards
+      $('#fm1').click(function(){
+        $('#div7').remove();
+        $('#tf1').after('<div id="div7"></div>');
+        $('#div7').css({
+          'animationDuration': '2s',
+          'animationIterationCount': '4',
+          'animationFillMode': 'forwards'
+        });
+      });
+
+      // Keyframes dengan persen
+      $('#fm2').click(function(){
+        $('#div8').remove();
+        $('#tf2').after('<div id="div8"></div>');
+        $('#div8').css({
+          'animationName': 'ganti-persen',
+          'animationDuration': '7s',
+          'animationIterationCount': '2'
+        });
+      });
+    });
+  </script>
+</body>
+</html>

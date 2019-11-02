@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Background Properties</title>
+
+  <style>
+    body{
+      top:0;
+      left: 0;
+    }
+
+    h1{
+      text-decoration: underline;
+    }
+
+    div{
+      height: 550px;
+      color: red;
+      background-image: url('assets/img/IMG_20190828_140349_HDR.jpg');
+    }
+
+    #div1{
+      background-size: contain;
+    }
+
+    #div2{
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    #div3{
+      background-size: cover;
+    }
+
+    #div4{
+      background-size: cover;
+      border: 12px dotted yellowgreen;
+    }
+
+    #div5{
+      background-size: cover;
+      border: 12px dotted yellowgreen;
+      background-clip: padding-box;
+      padding: 20px;
+    }
+
+    #div6{
+      background-size: cover;
+      border: 12px dotted yellowgreen;
+      background-clip: content-box;
+      padding: 20px;
+    }
+
+    #div7{
+      background-size: 200px 200px;
+      border: 12px dotted yellowgreen;
+      padding: 20px;
+      background-origin: border-box;
+      background-repeat: no-repeat;
+    }
+
+    #div8{
+      background-size: 200px 200px;
+      border: 12px dotted yellowgreen;
+      padding: 20px;
+      background-origin: content-box;
+      background-repeat: no-repeat;
+    }
+
+    #div9{
+      background-size: 200px 200px;
+      border: 12px dotted yellowgreen;
+      padding: 20px;
+      background-origin: padding-box;
+      background-repeat: no-repeat;
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Here -->
+  <h1><i>Background size contain</i></h1>
+  <div id="div1">Text Here</div>
+  
+  <h1><i>Background no repeat</i></h1>
+  <div id="div2">Text Here</div>
+
+  <h1><i>Background size cover</i></h1>
+  <div id="div3">...Text Here...</div>
+
+  <h1><i>Background with border</i></h1>
+  <div id="div4">...Text Here...</div>
+
+  <h1><i>Background clip with padding-box</i></h1>
+  <div id="div5">...Text Here...</div>
+
+  <h1><i>Background clip with content-box</i></h1>
+  <div id="div6">...Text Here...</div>
+
+  <h1><i>Background origin border-box</i></h1>
+  <div id="div7">...Text Here...</div>
+
+  <h1><i>Background origin content-box</i></h1>
+  <div id="div8">...Text Here...</div>
+
+  <h1><i>Background origin padding-box</i></h1>
+  <div id="div9">...Text Here...</div>
+
+</body>
+</html>

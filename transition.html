@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>CSS 3</title>
+
+  <style>
+    div{
+      width: 100px;
+      height: 100px;
+      background: blue;
+      margin-bottom: 5px;
+      transition: width 1s, margin-left 1.5s, background 1s; /* propery transition disini */
+    }
+
+    #div3, #div4{
+      transition: height 1s, background 1s;
+    }
+
+    #div1:hover{
+      transition-delay: 1s;
+      width: 200px;
+      margin-left: 30px;
+      background: red;
+    }
+
+    #div2:hover{
+      background: red;
+    }
+
+    #div3:hover{
+      transition-timing-function: ease-in-out;
+      height: 150px;
+      background: red;
+    }
+
+    #div4:hover{
+      transition-timing-function: ease-out;
+      height: 150px;
+      background: red;
+    }
+
+    #div5{
+      height: 0;
+      opacity: 0;
+      background: greenyellow;
+      transition: height 2s, opacity 2s;
+    }
+
+  </style>
+</head>
+<body>
+  <!-- Start Here -->
+  <h1>Transition</h1>
+  <div id="div1"></div>
+  <div id="div2"></div>
+  <div id="div3"></div>
+  <div id="div4"></div>
+  <br>
+  <button id="btn5">Div5</button>
+  <button id="btnR">Remove</button>
+  
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function(){
+      $('#btn5').click(function(e){
+        if(!$('#div5').get(0)){ //apabila tidak ada isi
+          $('#div4').after('<div id="div5"></div>');
+          $('#div5').css({
+            'height': '100px',
+            'opacity': '1'
+          });
+        }
+      });
+
+      $('#btnR').click(function(){
+        if($('#div5').height() === 0){
+          $('#div5').remove();
+        }
+
+        if($('#div5').get(0)){
+          $('#div5').css({
+            'height': '0px',
+            'opacity': '0'
+          });
+        }
+      });
+    });
+  </script>
+</body>
+</html>

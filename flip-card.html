@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Flip Card</title>
+
+  <style>
+    body{
+      margin-bottom: 500px;
+      margin-left: 50px;
+    }
+
+    #box{
+      perspective: 1000px;
+      perspective-origin: 20% 50%;
+    }
+
+    #card{
+      height: 200px; width: 200px;
+      transition: transform 2s;
+      border: 2px solid black;
+      color: white;
+      position: relative;
+      transform-style: preserve-3d;
+    }
+
+    #front, #back{
+      position: absolute;
+      top: 0;
+      left: 0;
+      height:200px; width: 200px;
+      backface-visibility:hidden;
+    }
+
+    #front{
+      background: blue;
+    }
+
+    #back{
+      transform: rotateY(180deg);
+      background: red;
+    }
+  </style>
+</head>
+<body>
+  <!-- Start Here -->
+  <h1>Flip Card</h1>
+  <div id="box">
+    <div id="card">
+      <div id="front">Sekolah</div>
+      <div id="back">Koding</div>
+    </div>
+  </div>
+  <br>
+  <button id="btn1">Click to flip !</button>
+  
+  <script src="assets/js/jquery-3.4.1.min.js"></script>
+  <script>
+    $(function(){
+      var sw;
+      $('#btn1').click(function(){
+        if(sw == false){
+          $('#card').css('transform', 'rotateY(0deg)');
+          sw = true;
+        }else{
+          $('#card').css('transform', 'rotateY(180deg)');
+          sw = false;
+        }
+      });
+    });
+  </script>
+</body>
+</html>
